@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.zillow.com)",
+      "WebSearch",
+      "WebFetch(domain:www.apartments.com)",
+      "WebFetch(domain:www.compass.com)",
+      "WebFetch(domain:www.coldwellbankerhomes.com)",
+      "WebFetch(domain:www.atproperties.com)",
+      "WebFetch(domain:resources.atproperties.com)"
+    ]
+  }
+}

@@ -14,7 +14,7 @@
   <!-- NAV -->
   <header class="nav">
     <div class="nav-inner">
-      <div class="logo-placeholder">[ Logo ]</div>
+      <img src="ethereal-properties.svg" alt="Ethereal Properties" class="logo" />
       <nav>
         <a href="#about">About</a>
         <a href="#property">Our Property</a>
@@ -46,7 +46,24 @@
     <div class="container">
       <h2>Our Property</h2>
       <div class="property-card">
-        <div class="property-image-placeholder">[ Photo Coming Soon ]</div>
+
+        <!-- CAROUSEL -->
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="carouselTrack">
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/1.jpg" alt="506 W Wisconsin St - exterior" />
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/2.jpg" alt="506 W Wisconsin St - living area" />
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/3.jpg" alt="506 W Wisconsin St - interior" />
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/4.jpg" alt="506 W Wisconsin St - kitchen" />
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/5.jpg" alt="506 W Wisconsin St - bedroom" />
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/6.jpg" alt="506 W Wisconsin St - bathroom" />
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/7.jpg" alt="506 W Wisconsin St - details" />
+            <img src="https://resources.atproperties.com/images/MRED/12/449/168/68a86e121a124/8.jpg" alt="506 W Wisconsin St - outdoor" />
+          </div>
+          <button class="carousel-btn carousel-btn--prev" id="prevBtn" aria-label="Previous photo">&#8592;</button>
+          <button class="carousel-btn carousel-btn--next" id="nextBtn" aria-label="Next photo">&#8594;</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+
         <div class="property-details">
           <h3>506 W Wisconsin St &mdash; Unit 2</h3>
           <p class="property-location">Lincoln Park &bull; Chicago, IL 60614</p>
@@ -87,6 +104,44 @@
   <footer class="footer">
     <p>&copy; 2026 Ethereal Properties &mdash; Chicago, IL</p>
   </footer>
+
+  <script>
+    const track   = document.getElementById('carouselTrack');
+    const imgs    = track.querySelectorAll('img');
+    const dotsEl  = document.getElementById('carouselDots');
+    let current   = 0;
+
+    // Build dots
+    imgs.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', `Photo ${i + 1}`);
+      d.addEventListener('click', () => goTo(i));
+      dotsEl.appendChild(d);
+    });
+
+    function goTo(n) {
+      current = (n + imgs.length) % imgs.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) =>
+        d.classList.toggle('active', i === current)
+      );
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+
+    // Auto-advance every 5s
+    setInterval(() => goTo(current + 1), 5000);
+
+    // Swipe support
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+    track.addEventListener('touchend',   e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+    });
+  </script>
 
 </body>
 </html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-label="Ethereal Properties logo">
+  <defs>
+    <style>
+      .ink{fill:#2E2320}
+      .accent{stroke:#B76A4A}
+      .serif{font-family:"Cormorant Garamond","Garamond","Georgia",serif}
+    </style>
+  </defs>
+
+  <g transform="translate(52 52)" fill="none" class="accent" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 150V78C40 46 66 20 98 20s58 26 58 58v72"/>
+    <path d="M40 150H156"/>
+    <!-- Spark -->
+    <path d="M98 34l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#B76A4A" stroke="none"/>
+    <circle cx="126" cy="118" r="6" fill="#B76A4A" stroke="none"/>
+  </g>
+
+  <text x="240" y="128" class="ink serif" font-size="96" font-weight="600">Ethereal</text>
+  <text x="244" y="176" class="ink serif" font-size="34" letter-spacing="6" font-weight="500">PROPERTIES</text>
+</svg>
