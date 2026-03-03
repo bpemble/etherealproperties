@@ -64,15 +64,51 @@ nav a {
 }
 nav a:hover { color: var(--brown); }
 
+.nav-login {
+  margin-left: 2rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid #c8bfb4;
+  border-radius: 2px;
+  color: var(--text) !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, border-color 0.2s, color 0.2s !important;
+}
+.nav-login:hover {
+  background: var(--brown) !important;
+  border-color: var(--brown) !important;
+  color: var(--white) !important;
+}
+
 /* ── Hero ── */
 .hero {
-  background: var(--warm);
-  padding: 8rem 2rem;
+  position: relative;
+  padding: 10rem 2rem;
   text-align: center;
+  background-color: var(--dark);
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 20, 14, 0.55) 0%,
+    rgba(28, 20, 14, 0.45) 60%,
+    rgba(28, 20, 14, 0.65) 100%
+  );
 }
 
 .hero-content {
-  max-width: 660px;
+  position: relative;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -81,22 +117,23 @@ nav a:hover { color: var(--brown); }
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--brown);
+  color: rgba(210, 175, 148, 0.9);
   margin-bottom: 1.25rem;
 }
 
 .hero h1 {
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
   font-weight: 400;
   font-style: italic;
   margin-bottom: 1.5rem;
-  color: var(--dark);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 24px rgba(0,0,0,0.3);
 }
 
 .subheading {
   font-size: 1.05rem;
   font-weight: 300;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   margin-bottom: 2.75rem;
   line-height: 1.8;
 }
@@ -104,7 +141,7 @@ nav a:hover { color: var(--brown); }
 /* ── Button ── */
 .btn {
   display: inline-block;
-  background: var(--brown);
+  background: transparent;
   color: var(--white);
   padding: 0.85rem 2.25rem;
   border-radius: 2px;
@@ -112,13 +149,25 @@ nav a:hover { color: var(--brown); }
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid rgba(255,255,255,0.6);
   cursor: pointer;
-  transition: background 0.2s, transform 0.15s;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
 }
 .btn:hover {
-  background: var(--dark);
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.9);
   transform: translateY(-1px);
+}
+
+/* Solid button variant for use outside the hero */
+.btn--solid {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--white);
+}
+.btn--solid:hover {
+  background: var(--dark);
+  border-color: var(--dark);
 }
 
 /* ── Sections ── */
@@ -151,6 +200,30 @@ nav a:hover { color: var(--brown); }
   color: var(--text);
   max-width: 640px;
   line-height: 1.85;
+}
+
+/* ── Units intro ── */
+.units-intro {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-top: -0.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 100%;
+}
+
+.unit-divider {
+  border: none;
+  border-top: 1px solid #ddd5c8;
+  margin: 3rem 0;
+}
+
+.unit-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: 0.25rem;
 }
 
 /* ── Property Card ── */
