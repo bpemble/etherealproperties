@@ -8,13 +8,13 @@
     </style>
   </defs>
 
-  <text x="40" y="160" class="ink serif" font-size="116" font-weight="600">Ethereal</text>
+  <text x="40" y="165" class="ink serif" font-size="132" font-weight="600">Ethereal</text>
 
   <!-- Arc dots separator (3 ink, 1 clay) -->
-  <circle cx="540" cy="132" r="6" class="ink"/>
-  <circle cx="562" cy="126" r="6" class="ink"/>
-  <circle cx="584" cy="126" r="6" class="ink"/>
-  <circle cx="606" cy="132" r="6" class="clay"/>
+  <circle cx="508" cy="132" r="6" class="ink"/>
+  <circle cx="530" cy="126" r="6" class="ink"/>
+  <circle cx="552" cy="126" r="6" class="ink"/>
+  <circle cx="574" cy="132" r="6" class="clay"/>
 
-  <text x="640" y="160" class="ink sans" font-size="46" font-weight="500" letter-spacing="7">PROPERTIES</text>
+  <text x="606" y="165" class="ink sans" font-size="54" font-weight="500" letter-spacing="7">PROPERTIES</text>
 </svg>
