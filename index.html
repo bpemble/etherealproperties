@@ -67,7 +67,7 @@
         <div class="property-details">
           <h3>506 W Wisconsin St &mdash; Unit 2</h3>
           <p class="property-location">Lincoln Park &bull; Chicago, IL 60614</p>
-          <p class="property-rent">$3,950 / month</p>
+          <p class="property-rent">$4,250 / month</p>
           <ul class="property-features">
             <li>2 bed &bull; 2 bath</li>
             <li>Skylights &amp; in-unit washer/dryer</li>
@@ -89,7 +89,9 @@
     <div class="container contact-container">
       <h2>Get in Touch</h2>
       <p>Have a question about our property or availability? We'd love to hear from you.</p>
-      <form class="contact-form" action="#" method="POST">
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none"><input name="bot-field" /></p>
         <div class="form-row">
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="email" placeholder="Email address" required />
