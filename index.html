@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ethereal Properties</title>
+  <title>Ethereal Properties — Lincoln Park, Chicago</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
       <img src="ethereal-properties.svg" alt="Ethereal Properties" class="logo" />
       <nav>
         <a href="#about">About</a>
-        <a href="#property">Our Property</a>
+        <a href="#property">The Property</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -26,25 +26,25 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <p class="eyebrow">Chicago, IL</p>
-      <h1>Homes worth coming back to.</h1>
-      <p class="subheading">Ethereal Properties is a boutique property management company dedicated to well-maintained, comfortable homes in great neighborhoods.</p>
-      <a href="#property" class="btn">See Our Property</a>
+      <p class="eyebrow">Lincoln Park &middot; Chicago, IL</p>
+      <h1>A home that holds you.</h1>
+      <p class="subheading">Ethereal Properties offers thoughtfully managed homes for those who value quality, quiet, and a landlord who actually picks up the phone.</p>
+      <a href="#property" class="btn">View the Property</a>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container">
-      <h2>About Us</h2>
-      <p>Ethereal Properties is a small, owner-operated landlord company focused on one thing: great places to live. We believe in responsive communication, well-kept spaces, and treating residents like neighbors — because they are.</p>
+      <h2>The Ethereal Difference</h2>
+      <p>We're a small, owner-operated company — one building, one set of values. We keep our properties in excellent condition, respond promptly when something needs attention, and treat our residents with the respect they deserve. No property management bureaucracy. Just good neighbors.</p>
     </div>
   </section>
 
   <!-- PROPERTY -->
   <section class="section section--alt" id="property">
     <div class="container">
-      <h2>Our Property</h2>
+      <h2>Now Leasing</h2>
       <div class="property-card">
 
         <!-- CAROUSEL -->
@@ -67,18 +67,36 @@
         <div class="property-details">
           <h3>506 W Wisconsin St &mdash; Unit 2</h3>
           <p class="property-location">Lincoln Park &bull; Chicago, IL 60614</p>
-          <p class="property-rent">$4,250 / month</p>
+
+          <div class="property-stats">
+            <div class="stat">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Bedrooms</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2</span>
+              <span class="stat-label">Bathrooms</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">1892</span>
+              <span class="stat-label">Built</span>
+            </div>
+          </div>
+
+          <p class="property-rent">$4,250 <span class="rent-period">/ month</span></p>
+
           <ul class="property-features">
-            <li>2 bed &bull; 2 bath</li>
-            <li>Skylights &amp; in-unit washer/dryer</li>
-            <li>15-ft built-in closet wall in primary suite</li>
-            <li>Private porch with yard access</li>
-            <li>Granite countertops &amp; dishwasher</li>
-            <li>Pets welcome</li>
+            <li>Skylights throughout</li>
+            <li>In-unit washer &amp; dryer</li>
+            <li>Floor-to-ceiling built-in closets</li>
+            <li>Private porch &amp; shared backyard</li>
+            <li>Granite countertops &amp; stainless appliances</li>
+            <li>Pets considered</li>
             <li>Steps from Bauler Park &amp; Old Town</li>
-            <li>0.5 mi to Sedgwick CTA station</li>
+            <li>0.5 mi to Sedgwick CTA (Brown &amp; Purple lines)</li>
           </ul>
-          <p class="property-note">Classic 1892 red brick building, fully renovated. Reach out below to schedule a tour.</p>
+
+          <p class="property-note">A classic 1892 red brick building, fully renovated and lovingly maintained. Reach out below to schedule a showing.</p>
         </div>
       </div>
     </div>
@@ -87,8 +105,8 @@
   <!-- CONTACT -->
   <section class="section" id="contact">
     <div class="container contact-container">
-      <h2>Get in Touch</h2>
-      <p>Have a question about our property or availability? We'd love to hear from you.</p>
+      <h2>Let's Talk</h2>
+      <p>Interested in the space, or just have questions? We respond personally and promptly &mdash; usually within the day.</p>
       <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
         <p style="display:none"><input name="bot-field" /></p>
@@ -96,7 +114,7 @@
           <input type="text" name="name" placeholder="Your name" required />
           <input type="email" name="email" placeholder="Email address" required />
         </div>
-        <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+        <textarea name="message" placeholder="Tell us a bit about yourself and what you're looking for." rows="5" required></textarea>
         <button type="submit" class="btn">Send Message</button>
       </form>
     </div>
@@ -104,7 +122,10 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2026 Ethereal Properties &mdash; Chicago, IL</p>
+    <p class="footer-name">Ethereal Properties</p>
+    <p>506 W Wisconsin St &bull; Chicago, IL 60614</p>
+    <p><a href="mailto:brian@etherealproperties.org">brian@etherealproperties.org</a></p>
+    <p class="footer-copy">&copy; 2026 Ethereal Properties. All rights reserved.</p>
   </footer>
 
   <script>
@@ -113,7 +134,6 @@
     const dotsEl  = document.getElementById('carouselDots');
     let current   = 0;
 
-    // Build dots
     imgs.forEach((_, i) => {
       const d = document.createElement('button');
       d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
@@ -133,10 +153,8 @@
     document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
     document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
 
-    // Auto-advance every 5s
     setInterval(() => goTo(current + 1), 5000);
 
-    // Swipe support
     let startX = 0;
     track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
     track.addEventListener('touchend',   e => {
