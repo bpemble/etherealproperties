@@ -88,7 +88,7 @@ nav a:hover { color: var(--brown); }
   padding: 10rem 2rem;
   text-align: center;
   background-color: var(--dark);
-  background-image: url('media/hero.jpg');
+  background-image: url('../media/hero.jpg');
   background-size: cover;
   background-position: center 60%;
   background-repeat: no-repeat;
