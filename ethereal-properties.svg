@@ -1,21 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" role="img" aria-label="Ethereal Properties logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-label="Ethereal Properties">
   <defs>
     <style>
-      .ink   { fill: #2E2320; }
-      .serif { font-family: "Cormorant Garamond", "Garamond", "Georgia", serif; }
+      .ink { fill: #2E2320; }
+      .clay { fill: #B76A4A; }
+      .serif { font-family: "Canela","Tiempos Headline","Cormorant Garamond","Garamond","Georgia",serif; }
+      .sans { font-family: "Söhne","Avenir Next","Inter","Helvetica Neue",Arial,sans-serif; }
     </style>
   </defs>
 
-  <!-- Arched doorway icon, vertically centered with text block -->
-  <g transform="translate(48 32)" fill="none" stroke="#B76A4A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M40 148V80C40 47 66 20 98 20s58 27 58 60v68"/>
-    <path d="M34 148H162"/>
-    <!-- Spark at arch apex -->
-    <path d="M98 20l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" fill="#B76A4A" stroke="none"/>
-    <!-- Door handle -->
-    <circle cx="126" cy="108" r="4" fill="#B76A4A" stroke="none"/>
-  </g>
+  <text x="40" y="160" class="ink serif" font-size="116" font-weight="600">Ethereal</text>
 
-  <text x="222" y="115" class="ink serif" font-size="88" font-weight="400" font-style="italic">Ethereal</text>
-  <text x="226" y="160" class="ink serif" font-size="27" letter-spacing="8" font-weight="300">PROPERTIES</text>
+  <!-- Arc dots separator (3 ink, 1 clay) -->
+  <circle cx="610" cy="132" r="6" class="ink"/>
+  <circle cx="632" cy="126" r="6" class="ink"/>
+  <circle cx="654" cy="126" r="6" class="ink"/>
+  <circle cx="676" cy="132" r="6" class="clay"/>
+
+  <text x="710" y="160" class="ink sans" font-size="46" font-weight="500" letter-spacing="7">PROPERTIES</text>
 </svg>
